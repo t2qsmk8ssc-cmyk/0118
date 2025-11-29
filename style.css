@@ -6,59 +6,20 @@
 body {
     min-height: 100vh;
     margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /* ★★★ 中央寄せの処理はcontent-boxに任せるため、flex設定を削除 ★★★ */
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
     
-    /* 文字色を白に設定 */
-    color: #fff;
+    color: #fff; /* 文字色を白に設定 */
     
-    /* オレンジ（#FFD480）から青緑（#2c4353）への滑らかなグラデーション */
+    /* グラデーション設定 (変更なし) */
     background: linear-gradient(
         to bottom,
-        #FFD480 0%,      /* 上部：明るいオレンジ/黄色 */
-        #A9A9A9 35%,     /* 中間2：ダークグレー（暖色と寒色の接続点） */
-        #5F9EA0 75%,     /* 中間3：青緑に近づけるための色 */
-        #2c4353 100%     /* 下部：濃い青緑（#2c4353）で終了 */
+        #FFD480 0%,
+        #A9A9A9 35%,
+        #5F9EA0 75%,
+        #2c4353 100%
     );
     font-family: 'M PLUS Rounded 1c', sans-serif; 
-}
-
-/*
-=============================
- 2. Googleフォントの指定
-=============================
-*/
-
-/* M PLUS Rounded 1c を適用し、★★★ 太さを最も細い100に設定 ★★★ */
-.mplus-font {
-    font-family: 'M PLUS Rounded 1c', sans-serif;
-    line-height: 1.8;
-    text-align: center;
-    /* ↓↓↓ 太さを最も細い「100」に設定 ↓↓↓ */
-    font-weight: 100; 
-}
-
-h1.mplus-font {
-    font-size: 2.5em;
-    /* ↓↓↓ h1の太字指定を解除し、最も細い「100」に設定 ↓↓↓ */
-    font-weight: 100; 
-    margin-bottom: 20px;
-}
-
-/*
-=============================
- 3. コンテンツの配置と装飾
-=============================
-*/
-.content-box {
-    background-color: rgba(0, 0, 0, 0.5); /* 半透明の黒で文字を際立たせる */
-    padding: 40px 60px;
-    border-radius: 15px;
-    max-width: 800px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-}
-
-p {
-    font-size: 1.1em;
 }
