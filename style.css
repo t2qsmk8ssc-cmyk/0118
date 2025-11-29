@@ -5,12 +5,11 @@
 */
 body {
     min-height: 100vh;
-    /* ★★★ body全体を中央寄せする設定を追加 ★★★ */
+    /* body全体のcolorは、文字グラデーションの際は無視されますが、安全のためtransparentを設定 */
+    color: transparent; 
     margin: 0 auto; 
     
-    color: #fff;
-    
-    /* グラデーション設定 */
+    /* グラデーション設定 (変更なし) */
     background: linear-gradient(
         to bottom,
         #FFD480 0%,
@@ -23,22 +22,45 @@ body {
 
 /*
 =============================
- 2. Googleフォントの指定
+ 2. Googleフォントの指定 (文字グラデーション適用)
 =============================
 */
 
 .mplus-font {
-    *{ font-family: 'M PLUS Rounded 1c', sans-serif; }
+    font-family: 'M PLUS Rounded 1c', sans-serif;
     line-height: 1.8;
-    /* ★★★ 文字を中央に強制配置 ★★★ */
     text-align: center !important; 
-    font-weight: 100; 
+    
+    /* ★★★ グラデーションが映えるよう、太さを標準の400に戻します ★★★ */
+    font-weight: 400; 
+    
+    /* ↓↓↓ 文字色グラデーションの設定 ↓↓↓ */
+    
+    /* 背景よりも濃い色のグラデーションを定義 (左から右へ) */
+    background: linear-gradient(
+        to right,    
+        #FF6347 0%,   /* 濃いオレンジ系 */
+        #1D2B37 100%  /* 背景色(#2c4353)よりさらに濃い青緑系 */
+    );
+    
+    /* 背景を文字の形に合わせて切り抜く */
+    -webkit-background-clip: text; 
+    background-clip: text;
+    
+    /* 文字色を透明に設定し、背景グラデーションを透けさせる */
+    color: transparent; 
 }
 
 h1.mplus-font {
     font-size: 2.5em;
-    font-weight: 100; 
+    font-weight: 700; /* 見出しは太字にしてグラデーションを強調 */
     margin-bottom: 20px;
+    
+    /* ★★★ h1にも文字グラデーションを適用 ★★★ */
+    background: linear-gradient(to right, #FF6347 0%, #1D2B37 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 /*
@@ -47,13 +69,7 @@ h1.mplus-font {
 =============================
 */
 .content-box {
-    background-color: rgba(0, 0, 0, 0.5); 
-    padding: 40px 60px;
-    border-radius: 15px;
-    max-width: 800px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    
-    /* ★★★ コンテンツブロックを中央に強制配置 ★★★ */
+    /* ...中略... */
     display: block !important;
     margin: 20px auto !important; 
 }
