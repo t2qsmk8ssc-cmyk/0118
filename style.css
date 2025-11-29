@@ -5,15 +5,12 @@
 */
 body {
     min-height: 100vh;
-    margin: 0;
-    /* ★★★ 中央寄せの処理はcontent-boxに任せるため、flex設定を削除 ★★★ */
-    /* display: flex; */
-    /* justify-content: center; */
-    /* align-items: center; */
+    /* ★★★ body全体を中央寄せする設定を追加 ★★★ */
+    margin: 0 auto; 
     
-    color: #fff; /* 文字色を白に設定 */
+    color: #fff;
     
-    /* グラデーション設定 (変更なし) */
+    /* グラデーション設定 */
     background: linear-gradient(
         to bottom,
         #FFD480 0%,
@@ -22,4 +19,45 @@ body {
         #2c4353 100%
     );
     font-family: 'M PLUS Rounded 1c', sans-serif; 
+}
+
+/*
+=============================
+ 2. Googleフォントの指定
+=============================
+*/
+
+.mplus-font {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    line-height: 1.8;
+    /* ★★★ 文字を中央に強制配置 ★★★ */
+    text-align: center !important; 
+    font-weight: 100; 
+}
+
+h1.mplus-font {
+    font-size: 2.5em;
+    font-weight: 100; 
+    margin-bottom: 20px;
+}
+
+/*
+=============================
+ 3. コンテンツの配置と装飾
+=============================
+*/
+.content-box {
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 40px 60px;
+    border-radius: 15px;
+    max-width: 800px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    
+    /* ★★★ コンテンツブロックを中央に強制配置 ★★★ */
+    display: block !important;
+    margin: 20px auto !important; 
+}
+
+p {
+    font-size: 1.1em;
 }
