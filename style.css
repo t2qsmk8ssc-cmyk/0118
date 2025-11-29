@@ -18,7 +18,7 @@ body {
         #5F9EA0 75%,
         #2c4353 100%
     );
-    font-family: 'M PLUS Rounded 1c', sans-serif; 
+    *{ font-family: 'M PLUS Rounded 1c', sans-serif; }
 }
 
 /*
