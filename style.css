@@ -28,7 +28,7 @@ body {
 */
 
 .mplus-font {
-    font-family: 'M PLUS Rounded 1c', sans-serif;
+    *{ font-family: 'M PLUS Rounded 1c', sans-serif; }
     line-height: 1.8;
     /* ★★★ 文字を中央に強制配置 ★★★ */
     text-align: center !important; 
