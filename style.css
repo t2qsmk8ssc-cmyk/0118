@@ -1,13 +1,14 @@
 /*
 =============================
- 1. 背景グラデーションの設定
+ 1. 全体設定と背景グラデーション
 =============================
 */
 body {
     min-height: 100vh;
-    /* bodyのcolorも安全のためtransparentを強制 */
-    color: transparent !important; 
     margin: 0 auto; 
+    
+    /* ★★★ 全体の文字色を #2B86E0 に設定 ★★★ */
+    color: #2B86E0 !important; 
     
     /* グラデーション設定 (変更なし) */
     background: linear-gradient(
@@ -17,50 +18,46 @@ body {
         #5F9EA0 75%,
         #2c4353 100%
     );
-    *{ font-family: 'M PLUS Rounded 1c', sans-serif; }
+    /* font-family の設定は *{} に移動しました */
 }
 
 /*
 =============================
- 2. Googleフォントの指定 (文字グラデーションの強制適用)
+ 2. 全要素にフォントを適用
 =============================
 */
 
+/* ★★★ 全ての要素（メニュー、広告、本文など）にフォントを適用 ★★★ */
+* { 
+    font-family: 'M PLUS Rounded 1c', sans-serif !important; 
+}
+
+/*
+=============================
+ 3. カスタムコンテンツの設定 (グラデーション関連を削除)
+=============================
+*/
+
+/* .mplus-fontやh1の設定は、グラデーションの設定を削除し、太さのみ残します */
 .mplus-font {
-    font-family: 'M PLUS Rounded 1c', sans-serif;
     line-height: 1.8;
     text-align: center !important; 
-    font-weight: 400; 
+    font-weight: 400 !important; /* 標準の太さ (見やすさのため) */
     
-    /* ↓↓↓ 文字色グラデーションの設定 ↓↓↓ */
-    background: linear-gradient(
-        to right,    
-        #FF6347 0%,   /* 濃いオレンジ系 */
-        #1D2B37 100%  /* 濃い青緑系 */
-    );
-    
-    -webkit-background-clip: text !important; /* ★★★ !important を追加 ★★★ */
-    background-clip: text !important;         /* ★★★ !important を追加 ★★★ */
-    
-    /* ★★★ 最重要: 文字色を透明に強制的に設定 ★★★ */
-    color: transparent !important; 
+    /* 文字グラデーションのCSSをすべて削除 */
 }
 
 h1.mplus-font {
     font-size: 2.5em;
-    font-weight: 700; 
+    font-weight: 700 !important; /* 見出しは太字に設定 */
     margin-bottom: 20px;
     
-    /* ★★★ h1にも強制適用 ★★★ */
-    background: linear-gradient(to right, #FF6347 0%, #1D2B37 100%);
-    -webkit-background-clip: text !important;
-    background-clip: text !important;
-    color: transparent !important;
+    /* 文字グラデーションのCSSをすべて削除 */
 }
 
 /*
 =============================
- 3. コンテンツの配置と装飾
+ 4. コンテンツの配置と装飾
 =============================
 */
 .content-box {
