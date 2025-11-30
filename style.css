@@ -7,7 +7,7 @@ body {
     min-height: 100vh;
     margin: 0 auto; 
     
-    color: #888888 !important; /* 文字色を濃いグレー #888888 に設定 */
+    color: #555555 !important; /* 文字色を濃いグレー #555555 に設定 */
     
     /* グラデーション設定 (変更なし) */
     background: linear-gradient(
@@ -28,14 +28,13 @@ body {
 /* 全ての要素にフォントとサイズを適用 */
 * { 
     font-family: 'M PLUS Rounded 1c', sans-serif !important;
-    font-size: 80% !important; 
+    font-size: 90% !important; 
 }
 
 /* ★★★★★ 追記したCSS ★★★★★ */
 /* HTMLで特定の文字だけサイズ変更したい時に使用するクラス */
 .temp-large {
     font-size: 50px !important; /* 非常に大きなサイズに設定 */
-    font-weight: 700 !important; /* 目立つように太字を強制 */
 }
 /* ★★★★★★★★★★★★★★★ */
 
