@@ -28,7 +28,7 @@ body {
 /* 全ての要素にフォントとサイズを適用 */
 * { 
     font-family: 'M PLUS Rounded 1c', sans-serif !important;
-    font-size: 95% !important; 
+    font-size: 80% !important; 
 }
 
 /* ★★★★★ 追記したCSS ★★★★★ */
